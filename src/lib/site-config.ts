@@ -9,7 +9,8 @@ export const business = {
   phoneE164: "+19852247888",
   smsE164: "+19852247888",
   email: "info@gulfsouthstumpgrinding.com",
-  url: "https://gulfsouthstumpgrinding.com",
+  // The apex domain redirects to www at the DNS/Vercel level, so www is canonical.
+  url: "https://www.gulfsouthstumpgrinding.com",
   founded: "2026",
   priceRange: "$$",
   insured: true,
