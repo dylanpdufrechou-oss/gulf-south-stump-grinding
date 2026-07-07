@@ -11,18 +11,19 @@ export const business = {
   email: "info@gulfsouthstumpgrinding.com",
   // The apex domain redirects to www at the DNS/Vercel level, so www is canonical.
   url: "https://www.gulfsouthstumpgrinding.com",
+  googleAnalyticsId: "G-70RJRW3DXJ",
   founded: "2026",
   priceRange: "$$",
   insured: true,
   licensed: false, // Louisiana/Mississippi do not require a specific license for stump grinding.
   yearsInBusiness: 0, // brand-new business — lead with insured + responsiveness, not tenure.
   pricingModel: "quote-only" as const,
-  addressLocality: "Covington",
+  addressLocality: "Folsom",
   addressRegion: "LA",
-  postalCode: "70433",
+  postalCode: "70437",
   addressCountry: "US",
-  // Approximate coordinates for Covington, LA (home base) — used in LocalBusiness schema.
-  geo: { latitude: 30.4755, longitude: -90.1009 },
+  // Approximate coordinates for Folsom, LA (home base) — used in LocalBusiness schema.
+  geo: { latitude: 30.6094, longitude: -90.2093 },
   sameAs: [
     // TODO: add Google Business Profile, Facebook, Instagram URLs once created.
   ],
@@ -63,7 +64,7 @@ const area = (
 });
 
 // 15 parishes/counties, ~30 city landing pages across Southeast Louisiana and the
-// Mississippi Gulf South, all within roughly a 1-1.5hr drive of Covington (home base).
+// Mississippi Gulf South, all within roughly a 1-1.5hr drive of Folsom (home base).
 export const serviceAreas: ServiceArea[] = [
   area("St. Tammany", "LA", "Parish", ["Covington", "Mandeville", "Slidell", "Madisonville", "Abita Springs", "Folsom"], true),
   area("Washington", "LA", "Parish", ["Bogalusa", "Franklinton"]),

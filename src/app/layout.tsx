@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { business } from "@/lib/site-config";
 import { JsonLd, localBusinessSchema } from "@/lib/schema";
@@ -56,6 +57,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <GoogleAnalytics gaId={business.googleAnalyticsId} />
       </body>
     </html>
   );
