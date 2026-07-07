@@ -11,8 +11,8 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.png" alt={`${business.name} logo`} width={48} height={48} className="rounded-full" />
-            <span className="font-heading font-semibold leading-tight">
+            <Image src="/logo.png" alt={`${business.name} logo`} width={96} height={96} className="rounded-full w-16 h-16" />
+            <span className="font-heading font-semibold leading-tight text-lg">
               Gulf South
               <br />
               Stump Grinding

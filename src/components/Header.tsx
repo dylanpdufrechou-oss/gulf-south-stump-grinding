@@ -32,10 +32,17 @@ export default function Header() {
       </div>
 
       <div className="bg-white border-b border-black/5 shadow-sm">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-24">
           <Link href="/" className="flex items-center gap-3 shrink-0" aria-label={`${business.name} home`}>
-            <Image src="/logo.png" alt={`${business.name} logo`} width={56} height={56} className="rounded-full" priority />
-            <span className="hidden md:block font-heading font-semibold text-ink-500 leading-tight text-lg">
+            <Image
+              src="/logo.png"
+              alt={`${business.name} logo`}
+              width={96}
+              height={96}
+              className="rounded-full w-16 h-16 sm:w-20 sm:h-20"
+              priority
+            />
+            <span className="hidden md:block font-heading font-semibold text-ink-500 leading-tight text-xl">
               Gulf South
               <br />
               Stump Grinding
