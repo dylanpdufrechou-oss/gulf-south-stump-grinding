@@ -5,10 +5,9 @@
 export const business = {
   name: "Gulf South Stump Grinding",
   legalName: "Gulf South Stump Grinding",
-  // TODO: replace with the real Google Voice number once secured (985 area code target).
-  phoneDisplay: "(985) 000-0000",
-  phoneE164: "+19850000000",
-  smsE164: "+19850000000",
+  phoneDisplay: "(985) 224-7888",
+  phoneE164: "+19852247888",
+  smsE164: "+19852247888",
   email: "info@gulfsouthstumpgrinding.com",
   url: "https://gulfsouthstumpgrinding.com",
   founded: "2026",
