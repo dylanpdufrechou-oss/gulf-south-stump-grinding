@@ -1,6 +1,6 @@
 # Gulf South Stump Grinding — Progress Log
 
-Last updated: 2026-07-10
+Last updated: 2026-08-04
 
 ## Business
 
@@ -39,10 +39,11 @@ Next.js 16 (App Router) + Tailwind v4 + TypeScript, source of truth for NAP/serv
 
 ## In progress / not started
 
-- [ ] **Google Business Profile** — walked through setup steps and drafted a business description; completion not yet confirmed. Once live, add the profile URL to `business.sameAs` in `site-config.ts`.
+- [ ] **Google Business Profile** — profile created (name, category, all 15 service areas, phone, hours, description, services) and submitted for verification. Google only offered video verification for this listing — Dylan needs to film equipment/truck/job site and submit at business.google.com. Once verified, add the profile URL to `business.sameAs` in `site-config.ts`.
 - [ ] **Google Local Services Ads (LSA)** — recommended as the highest-priority paid channel (pay-per-lead, "Google Guaranteed" badge compensates for zero reviews). Needs: Certificate of Insurance, background check, category selection (likely "Tree Service"). Not yet applied for.
 - [ ] **Email inbox** — confirm info@gulfsouthstumpgrinding.com is actually receiving mail (forwarding to personal Gmail, or a real mailbox via Google Workspace).
-- [ ] **Reviews & before/after photos** — none yet; update Gallery/Reviews pages and add Review schema once real jobs are done. Do not fabricate.
+- [x] **Before/after photos** — first job (large oak stump) added to Gallery page: 3 real photos + time-lapse video, optimized for web (HEVC source transcoded to H.264 MP4, images resized/converted to WebP).
+- [ ] **Reviews** — none yet; add Review schema once real reviews come in. Do not fabricate.
 - [ ] **Content/blog strategy** — long-term plan for ranking hundreds of local search terms; not started.
 - [ ] **Google Ads (standard Search)** — lower priority than LSA right now; revisit once LSA is running.
 
