@@ -9,7 +9,7 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Service Areas",
   description:
-    "Gulf South Stump Grinding serves 30+ cities across Southeast Louisiana and South Mississippi, including St. Tammany, Orleans, Jefferson, and Pearl River.",
+    "Gulf South Stump Grinding serves 24 cities across the Florida Parishes and South Mississippi, including St. Tammany, Livingston, Tangipahoa, and Pearl River.",
   alternates: { canonical: "/service-areas" },
 };
 
@@ -26,7 +26,7 @@ export default function ServiceAreasPage() {
 
       <PageHero
         title="Where We Work"
-        description="Based in St. Tammany Parish, serving homeowners and businesses across Southeast Louisiana and the Mississippi Gulf South."
+        description="Based in St. Tammany Parish, serving homeowners and businesses across the Florida Parishes and South Mississippi."
         breadcrumbs={[{ name: "Home", href: "/" }, { name: "Service Areas" }]}
       />
 

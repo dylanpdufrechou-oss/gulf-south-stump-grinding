@@ -8,7 +8,7 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Before & After Gallery",
-  description: "Before and after photos from our stump grinding jobs across Southeast Louisiana and South Mississippi.",
+  description: "Before and after photos from our stump grinding jobs across the Florida Parishes and South Mississippi.",
   alternates: { canonical: "/gallery" },
 };
 
@@ -103,8 +103,8 @@ export default function GalleryPage() {
           </h2>
           <p className="mt-4 text-ink-500/70 leading-relaxed">
             We&apos;re a new crew building our portfolio one job at a time. Check back as we add
-            more before-and-after photos from properties across Southeast Louisiana and the
-            Mississippi Gulf South.
+            more before-and-after photos from properties across the Florida Parishes and
+            South Mississippi.
           </p>
           <p className="mt-4 text-ink-500/70 leading-relaxed">
             Booking a job in your area? Ask us about a discount for letting us photograph the

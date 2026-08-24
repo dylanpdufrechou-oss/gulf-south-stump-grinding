@@ -44,43 +44,63 @@ export type ServiceArea = {
   /** "parish" for Louisiana, "county" for Mississippi */
   unitLabel: "Parish" | "County";
   isHome?: boolean;
-  cities: { name: string; slug: string }[];
+  cities: { name: string; slug: string; localNote?: string }[];
 };
 
 const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
+type CityInput = string | { name: string; slug?: string; localNote?: string };
 
 const area = (
   parish: string,
   state: "LA" | "MS",
   unitLabel: "Parish" | "County",
-  cityNames: string[],
+  cityInputs: CityInput[],
   isHome = false
 ): ServiceArea => ({
   parish,
   state,
   unitLabel,
   isHome,
-  cities: cityNames.map((name) => ({ name, slug: slugify(name) })),
+  cities: cityInputs.map((c) =>
+    typeof c === "string"
+      ? { name: c, slug: slugify(c) }
+      : { name: c.name, slug: c.slug ?? slugify(c.name), localNote: c.localNote }
+  ),
 });
 
-// 15 parishes/counties, ~30 city landing pages across Southeast Louisiana and the
-// Mississippi Gulf South, all within roughly a 1-1.5hr drive of Folsom (home base).
+// 11 parishes/counties, 24 city landing pages across the Florida Parishes and South
+// Mississippi, matching the verified Google Business Profile service area. Greater
+// New Orleans (Orleans, Jefferson, St. Bernard, St. John the Baptist, St. Charles
+// parishes) was dropped from coverage.
 export const serviceAreas: ServiceArea[] = [
   area("St. Tammany", "LA", "Parish", ["Covington", "Mandeville", "Slidell", "Madisonville", "Abita Springs", "Folsom"], true),
   area("Washington", "LA", "Parish", ["Bogalusa", "Franklinton"]),
   area("Tangipahoa", "LA", "Parish", ["Hammond", "Ponchatoula", "Amite"]),
-  area("Livingston", "LA", "Parish", ["Denham Springs", "Walker"]),
-  area("Orleans", "LA", "Parish", ["New Orleans"]),
-  area("Jefferson", "LA", "Parish", ["Metairie", "Kenner", "Gretna"]),
-  area("St. Bernard", "LA", "Parish", ["Chalmette"]),
-  area("St. John the Baptist", "LA", "Parish", ["LaPlace"]),
-  area("St. Charles", "LA", "Parish", ["Luling", "Destrehan"]),
+  area("Livingston", "LA", "Parish", [
+    "Denham Springs",
+    "Walker",
+    {
+      name: "Springfield",
+      slug: "springfield-la",
+      localNote:
+        "Springfield sits in the wooded, low-lying eastern end of Livingston Parish near Lake Maurepas — heavily forested lots here mean big hardwood stumps are the norm, not the exception.",
+    },
+  ]),
   area("Ascension", "LA", "Parish", ["Gonzales", "Prairieville"]),
   area("St. Helena", "LA", "Parish", ["Greensburg"]),
   area("Pearl River", "MS", "County", ["Picayune", "Poplarville"]),
   area("Hancock", "MS", "County", ["Bay St. Louis", "Waveland"]),
   area("Marion", "MS", "County", ["Columbia"]),
   area("Walthall", "MS", "County", ["Tylertown"]),
+  area("Pike", "MS", "County", [
+    {
+      name: "McComb",
+      slug: "mccomb-ms",
+      localNote:
+        "McComb is Pike County's largest city and a historic railroad hub in the Piney Woods of southwest Mississippi — mature pine and hardwood growth throughout town keeps us busy on both residential and commercial lots.",
+    },
+  ]),
 ];
 
 export type CityEntry = ServiceArea["cities"][number] & {

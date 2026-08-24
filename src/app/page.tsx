@@ -7,9 +7,9 @@ import { faqs } from "@/lib/content/faqs";
 import { JsonLd, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Stump Grinding in Southeast Louisiana & South Mississippi",
+  title: "Stump Grinding in the Florida Parishes & South Mississippi",
   description:
-    "Gulf South Stump Grinding removes stumps fast for homes and businesses from the Northshore to Greater New Orleans and the Mississippi Gulf South. Fully insured, free quotes.",
+    "Gulf South Stump Grinding removes stumps fast for homes and businesses across the Northshore, the Florida Parishes, and South Mississippi. Fully insured, free quotes.",
   alternates: { canonical: "/" },
 };
 
@@ -60,14 +60,14 @@ export default function Home() {
         <Container className="py-20 sm:py-28 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-accent-400 font-semibold tracking-wide uppercase text-sm mb-4">
-              Southeast Louisiana &amp; South Mississippi
+              Florida Parishes &amp; South Mississippi
             </p>
             <h1 className="font-heading font-bold text-4xl sm:text-5xl leading-tight">
               Stumps Gone. Yard Back.
             </h1>
             <p className="mt-6 text-lg text-white/80 max-w-xl">
-              Fully insured stump grinding for homeowners and businesses from the
-              Northshore to Greater New Orleans and the Mississippi Gulf Coast. Free
+              Fully insured stump grinding for homeowners and businesses across the
+              Northshore, the Florida Parishes, and South Mississippi. Free
               quotes, fast scheduling, no hidden fees.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -141,8 +141,8 @@ export default function Home() {
             <div>
               <h2 className="font-heading font-bold text-3xl text-ink-500">Where We Work</h2>
               <p className="mt-3 text-ink-500/70 max-w-2xl">
-                Based in St. Tammany Parish, serving 30+ cities across Southeast Louisiana
-                and the Mississippi Gulf South.
+                Based in St. Tammany Parish, serving 24 cities across the Florida Parishes
+                and South Mississippi.
               </p>
             </div>
             <Link href="/service-areas" className="text-sm font-semibold text-teal-600 hover:text-teal-700">

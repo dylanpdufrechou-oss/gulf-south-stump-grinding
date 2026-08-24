@@ -1,6 +1,6 @@
 # Gulf South Stump Grinding — Progress Log
 
-Last updated: 2026-08-04
+Last updated: 2026-08-24
 
 ## Business
 
@@ -10,18 +10,19 @@ Last updated: 2026-08-04
 - **Domain:** gulfsouthstumpgrinding.com — apex redirects to `www`, which is canonical
 - **Home base:** Folsom, LA (St. Tammany Parish), 70437
 - **Status:** brand-new business, fully insured, no license required for stump grinding in LA/MS, quote-only pricing (no public price list)
-- **Service area:** 15 parishes/counties, ~30 city landing pages across Southeast Louisiana and the Mississippi Gulf South (St. Tammany, Washington, Tangipahoa, Livingston, Orleans, Jefferson, St. Bernard, St. John the Baptist, St. Charles, Ascension, St. Helena in LA; Pearl River, Hancock, Marion, Walthall in MS)
+- **Service area:** 11 parishes/counties, 24 city landing pages across the Florida Parishes and South Mississippi (St. Tammany, Washington, Tangipahoa, Livingston, Ascension, St. Helena in LA; Pearl River, Hancock, Marion, Walthall, Pike in MS) — matches the verified Google Business Profile. Greater New Orleans (Orleans, Jefferson, St. Bernard, St. John the Baptist, St. Charles parishes) was dropped from coverage on 2026-08-24; the 8 old city pages 301/308-redirect to `/service-areas`.
 - **Brand:** circular badge logo, teal `#1c747b` + dark ink, stump/saw-blade/cypress motif; Oswald (headings) + Inter (body)
 
 ## Website
 
 Next.js 16 (App Router) + Tailwind v4 + TypeScript, source of truth for NAP/service-areas in `src/lib/site-config.ts`.
 
-- Pages: Home, Stump Grinding, Residential, Commercial, About, FAQ, Gallery, Reviews, Contact (quote form → mailto), Service Areas index + 30 dynamic city pages
+- Pages: Home, Stump Grinding, Residential, Commercial, About, FAQ, Gallery, Reviews, Contact (quote form → mailto), Service Areas index + 24 dynamic city pages
 - Gallery/Reviews pages honestly say the business is new — no fabricated photos or reviews
 - Schema.org: LocalBusiness, Service, FAQPage, BreadcrumbList
-- sitemap.xml (40 URLs), robots.txt, canonical URLs on every page
+- sitemap.xml (34 URLs), robots.txt, canonical URLs on every page
 - Google Analytics 4 installed (`G-70RJRW3DXJ`) via `@next/third-parties`, verified single-fire in production
+- Redirects for dropped service-area pages live in `next.config.ts` (`removedServiceAreaSlugs`)
 
 ## Infrastructure
 

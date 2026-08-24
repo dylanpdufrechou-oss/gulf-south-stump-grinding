@@ -8,7 +8,7 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Gulf South Stump Grinding is a locally owned, fully insured stump grinding company serving Southeast Louisiana and South Mississippi.",
+    "Gulf South Stump Grinding is a locally owned, fully insured stump grinding company serving the Florida Parishes and South Mississippi.",
   alternates: { canonical: "/about" },
 };
 
@@ -46,8 +46,8 @@ export default function AboutPage() {
           <h2 className="font-heading font-bold text-3xl text-ink-500">Who We Are</h2>
           <p className="mt-4 text-ink-500/70 leading-relaxed">
             Gulf South Stump Grinding is a locally owned business based in St. Tammany Parish,
-            serving homeowners and businesses across Southeast Louisiana and the Mississippi
-            Gulf South. We&apos;re a newer name in the area, which means we&apos;re earning every
+            serving homeowners and businesses across the Florida Parishes and South
+            Mississippi. We&apos;re a newer name in the area, which means we&apos;re earning every
             customer's trust one job at a time — with fair quotes, real responsiveness, and
             a fully insured crew that shows up when it says it will.
           </p>

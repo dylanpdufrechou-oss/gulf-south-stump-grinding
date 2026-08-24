@@ -8,7 +8,7 @@ import { JsonLd, serviceSchema, breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Residential Stump Grinding",
   description:
-    "Homeowner stump grinding across Southeast Louisiana and South Mississippi — storm cleanup, backyard stumps, and yard prep for landscaping. Free quotes.",
+    "Homeowner stump grinding across the Florida Parishes and South Mississippi — storm cleanup, backyard stumps, and yard prep for landscaping. Free quotes.",
   alternates: { canonical: "/residential" },
 };
 
@@ -39,7 +39,7 @@ export default function ResidentialPage() {
           serviceSchema({
             name: "Residential Stump Grinding",
             description:
-              "Stump grinding for homeowners across Southeast Louisiana and South Mississippi, including storm cleanup and landscaping prep.",
+              "Stump grinding for homeowners across the Florida Parishes and South Mississippi, including storm cleanup and landscaping prep.",
             areaServed: serviceAreas.map((a) => `${a.parish} ${a.unitLabel}`),
             url: `${business.url}/residential`,
           }),
@@ -53,7 +53,7 @@ export default function ResidentialPage() {
       <PageHero
         eyebrow="For Homeowners"
         title="Residential Stump Grinding"
-        description="From a single backyard stump to a whole yard full of storm cleanup, we handle homeowner jobs across the Northshore, Greater New Orleans, and the Mississippi Gulf South."
+        description="From a single backyard stump to a whole yard full of storm cleanup, we handle homeowner jobs across the Northshore, the Florida Parishes, and South Mississippi."
         breadcrumbs={[{ name: "Home", href: "/" }, { name: "Residential Services" }]}
       />
 

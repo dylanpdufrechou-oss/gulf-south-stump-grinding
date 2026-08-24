@@ -8,7 +8,7 @@ import { JsonLd, serviceSchema, breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Commercial Stump Grinding",
   description:
-    "Stump grinding for HOAs, property managers, and businesses across Southeast Louisiana and South Mississippi. Flexible scheduling, multi-property quotes.",
+    "Stump grinding for HOAs, property managers, and businesses across the Florida Parishes and South Mississippi. Flexible scheduling, multi-property quotes.",
   alternates: { canonical: "/commercial" },
 };
 
@@ -39,7 +39,7 @@ export default function CommercialPage() {
           serviceSchema({
             name: "Commercial Stump Grinding",
             description:
-              "Stump grinding for HOAs, property managers, and businesses across Southeast Louisiana and South Mississippi.",
+              "Stump grinding for HOAs, property managers, and businesses across the Florida Parishes and South Mississippi.",
             areaServed: serviceAreas.map((a) => `${a.parish} ${a.unitLabel}`),
             url: `${business.url}/commercial`,
           }),

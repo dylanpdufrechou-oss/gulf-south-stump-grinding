@@ -61,7 +61,7 @@ export default function ContactPage() {
 
             <div className="mt-8 text-sm text-ink-500/70">
               <p className="font-semibold text-ink-500">Service Area</p>
-              <p className="mt-1">Southeast Louisiana &amp; South Mississippi Gulf South</p>
+              <p className="mt-1">Florida Parishes &amp; South Mississippi</p>
             </div>
           </div>
         </Container>

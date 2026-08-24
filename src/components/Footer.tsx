@@ -19,8 +19,8 @@ export default function Footer() {
             </span>
           </Link>
           <p className="mt-4 text-sm text-white/70 leading-relaxed">
-            Fully insured stump grinding for homeowners and businesses across Southeast
-            Louisiana and the Mississippi Gulf South.
+            Fully insured stump grinding for homeowners and businesses across the Florida
+            Parishes and South Mississippi.
           </p>
           <div className="mt-4 text-sm space-y-1">
             <a href={`tel:${business.phoneE164}`} className="block font-semibold hover:text-teal-300">
@@ -98,7 +98,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/50">
           <p>© {new Date().getFullYear()} {business.name}. All rights reserved.</p>
-          <p>Serving Southeast Louisiana &amp; South Mississippi</p>
+          <p>Serving the Florida Parishes &amp; South Mississippi</p>
         </div>
       </div>
     </footer>

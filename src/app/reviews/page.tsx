@@ -7,7 +7,7 @@ import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Reviews",
-  description: "Customer reviews for Gulf South Stump Grinding — Southeast Louisiana and South Mississippi's insured stump grinding crew.",
+  description: "Customer reviews for Gulf South Stump Grinding — the Florida Parishes and South Mississippi's insured stump grinding crew.",
   alternates: { canonical: "/reviews" },
 };
 

@@ -98,6 +98,9 @@ export default async function CityPage({
             Stump Grinding Services in {city.name}
           </h2>
           <p className="mt-4 text-ink-500/70 leading-relaxed">{intro}</p>
+          {city.localNote && (
+            <p className="mt-4 text-ink-500/70 leading-relaxed">{city.localNote}</p>
+          )}
           <p className="mt-4 text-ink-500/70 leading-relaxed">
             Every stump is ground below grade with the root flare removed, so you can mow,
             landscape, or replant right over it. We quote every {city.name} job individually — no

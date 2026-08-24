@@ -23,18 +23,18 @@ const oswald = Oswald({
 export const metadata: Metadata = {
   metadataBase: new URL(business.url),
   title: {
-    default: `${business.name} | Stump Grinding in Southeast Louisiana & South Mississippi`,
+    default: `${business.name} | Stump Grinding in the Florida Parishes & South Mississippi`,
     template: `%s | ${business.name}`,
   },
   description:
-    "Fast, fully insured stump grinding for homeowners and businesses across the Northshore, Greater New Orleans, and the Mississippi Gulf South. Call or text for a free quote.",
+    "Fast, fully insured stump grinding for homeowners and businesses across the Northshore, the Florida Parishes, and South Mississippi. Call or text for a free quote.",
   openGraph: {
     type: "website",
     siteName: business.name,
     url: business.url,
-    title: `${business.name} | Stump Grinding in Southeast Louisiana & South Mississippi`,
+    title: `${business.name} | Stump Grinding in the Florida Parishes & South Mississippi`,
     description:
-      "Fast, fully insured stump grinding for homeowners and businesses across the Northshore, Greater New Orleans, and the Mississippi Gulf South.",
+      "Fast, fully insured stump grinding for homeowners and businesses across the Northshore, the Florida Parishes, and South Mississippi.",
   },
   robots: {
     index: true,

@@ -9,7 +9,7 @@ import { JsonLd, serviceSchema, breadcrumbSchema, faqSchema } from "@/lib/schema
 export const metadata: Metadata = {
   title: "Stump Grinding Services",
   description:
-    "Professional stump grinding across Southeast Louisiana and South Mississippi. Full-size stumps ground below grade, roots included, insured crew, free quotes.",
+    "Professional stump grinding across the Florida Parishes and South Mississippi. Full-size stumps ground below grade, roots included, insured crew, free quotes.",
   alternates: { canonical: "/stump-grinding" },
 };
 
@@ -58,7 +58,7 @@ export default function StumpGrindingPage() {
           serviceSchema({
             name: "Stump Grinding",
             description:
-              "Professional stump grinding for residential and commercial properties across Southeast Louisiana and South Mississippi.",
+              "Professional stump grinding for residential and commercial properties across the Florida Parishes and South Mississippi.",
             areaServed: serviceAreas.map((a) => `${a.parish} ${a.unitLabel}`),
             url: `${business.url}/stump-grinding`,
           }),
@@ -73,7 +73,7 @@ export default function StumpGrindingPage() {
       <PageHero
         eyebrow="Our Core Service"
         title="Stump Grinding Done Right, the First Time"
-        description="Full-size stumps ground below grade — roots included, yard left clean. Fully insured crew serving Southeast Louisiana and the Mississippi Gulf South."
+        description="Full-size stumps ground below grade — roots included, yard left clean. Fully insured crew serving the Florida Parishes and South Mississippi."
         breadcrumbs={[{ name: "Home", href: "/" }, { name: "Stump Grinding" }]}
       />
 
