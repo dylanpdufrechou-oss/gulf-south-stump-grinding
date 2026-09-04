@@ -71,7 +71,7 @@ export default function ResidentialPage() {
         </Container>
       </section>
 
-      <section className="py-20 bg-teal-50">
+      <section className="py-20 bg-brand-50">
         <Container className="max-w-3xl">
           <h2 className="font-heading font-bold text-3xl text-ink-500">What to Expect</h2>
           <ol className="mt-6 space-y-4 text-ink-500/80">

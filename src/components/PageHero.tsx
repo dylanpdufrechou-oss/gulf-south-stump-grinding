@@ -32,7 +32,7 @@ export default function PageHero({
           </ol>
         </nav>
         {eyebrow && (
-          <p className="text-accent-400 font-semibold tracking-wide uppercase text-sm mb-3">
+          <p className="text-brand-400 font-semibold tracking-wide uppercase text-sm mb-3">
             {eyebrow}
           </p>
         )}

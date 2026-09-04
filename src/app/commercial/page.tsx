@@ -71,7 +71,7 @@ export default function CommercialPage() {
         </Container>
       </section>
 
-      <section className="py-20 bg-teal-50">
+      <section className="py-20 bg-brand-50">
         <Container className="max-w-3xl">
           <h2 className="font-heading font-bold text-3xl text-ink-500">Working With Us</h2>
           <p className="mt-4 text-ink-500/70 leading-relaxed">

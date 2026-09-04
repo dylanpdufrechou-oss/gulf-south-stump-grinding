@@ -45,7 +45,7 @@ export default function ContactPage() {
 
             <div className="mt-8 text-sm text-ink-500/70 space-y-1">
               <p className="font-semibold text-ink-500">Email</p>
-              <a href={`mailto:${business.email}`} className="hover:text-teal-600">
+              <a href={`mailto:${business.email}`} className="hover:text-brand-600">
                 {business.email}
               </a>
             </div>

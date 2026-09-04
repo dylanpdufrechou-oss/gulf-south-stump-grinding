@@ -109,7 +109,7 @@ export default async function CityPage({
         </Container>
       </section>
 
-      <section className="py-20 bg-teal-50">
+      <section className="py-20 bg-brand-50">
         <Container className="max-w-3xl">
           <h2 className="font-heading font-bold text-3xl text-ink-500">Local FAQs</h2>
           <div className="mt-8 space-y-6">
@@ -134,7 +134,7 @@ export default async function CityPage({
                 <Link
                   key={c.slug}
                   href={`/service-areas/${c.slug}`}
-                  className="rounded-md border border-black/10 px-4 py-2 text-sm font-medium text-ink-500 hover:border-teal-500 hover:text-teal-600"
+                  className="rounded-md border border-black/10 px-4 py-2 text-sm font-medium text-ink-500 hover:border-brand-500 hover:text-brand-600"
                 >
                   {c.name}
                 </Link>

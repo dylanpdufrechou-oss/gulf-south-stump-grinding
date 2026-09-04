@@ -4,42 +4,35 @@
   --background: #ffffff;
   --foreground: #10181a;
 
-  /* Brand palette sampled directly from the logo. */
-  --color-teal-50: #eaf4f4;
-  --color-teal-100: #cfe6e6;
-  --color-teal-300: #6ba9ac;
-  --color-teal-500: #1c747b;
-  --color-teal-600: #175f65;
-  --color-teal-700: #124a4f;
-  --color-teal-900: #0d3236;
+  /* Brand palette sampled directly from the 2026-09 red/black/white logo redesign. */
+  --color-brand-50: #fdecec;
+  --color-brand-100: #f8d0d2;
+  --color-brand-300: #e2727a;
+  --color-brand-400: #e2262d;
+  --color-brand-500: #bb0a0f;
+  --color-brand-600: #970810;
+  --color-brand-700: #7a060c;
+  --color-brand-900: #3d0407;
 
   --color-ink-500: #10181a;
   --color-ink-700: #0a1112;
-
-  /* Warm accent for CTAs — complementary to teal, reads as "act now". */
-  --color-accent-400: #fb923c;
-  --color-accent-500: #f2792a;
-  --color-accent-600: #db5f12;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-teal-50: var(--color-teal-50);
-  --color-teal-100: var(--color-teal-100);
-  --color-teal-300: var(--color-teal-300);
-  --color-teal-500: var(--color-teal-500);
-  --color-teal-600: var(--color-teal-600);
-  --color-teal-700: var(--color-teal-700);
-  --color-teal-900: var(--color-teal-900);
+  --color-brand-50: var(--color-brand-50);
+  --color-brand-100: var(--color-brand-100);
+  --color-brand-300: var(--color-brand-300);
+  --color-brand-400: var(--color-brand-400);
+  --color-brand-500: var(--color-brand-500);
+  --color-brand-600: var(--color-brand-600);
+  --color-brand-700: var(--color-brand-700);
+  --color-brand-900: var(--color-brand-900);
 
   --color-ink-500: var(--color-ink-500);
   --color-ink-700: var(--color-ink-700);
-
-  --color-accent-400: var(--color-accent-400);
-  --color-accent-500: var(--color-accent-500);
-  --color-accent-600: var(--color-accent-600);
 
   --font-sans: var(--font-inter);
   --font-heading: var(--font-oswald);

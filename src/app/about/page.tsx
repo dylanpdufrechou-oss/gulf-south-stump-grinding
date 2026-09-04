@@ -60,7 +60,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-20 bg-teal-50">
+      <section className="py-20 bg-brand-50">
         <Container>
           <h2 className="font-heading font-bold text-3xl text-ink-500">What We Stand On</h2>
           <div className="mt-10 grid sm:grid-cols-3 gap-6">

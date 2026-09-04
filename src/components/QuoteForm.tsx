@@ -42,7 +42,7 @@ export default function QuoteForm() {
         <select
           id="serviceType"
           name="serviceType"
-          className="w-full rounded-md border border-black/15 px-3.5 py-2.5 text-ink-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full rounded-md border border-black/15 px-3.5 py-2.5 text-ink-500 focus:outline-none focus:ring-2 focus:ring-brand-500"
           defaultValue="Residential"
         >
           <option>Residential</option>
@@ -59,17 +59,17 @@ export default function QuoteForm() {
           name="details"
           rows={4}
           placeholder="Number of stumps, approximate size, and access to the area (e.g. fenced backyard, tight side gate)"
-          className="w-full rounded-md border border-black/15 px-3.5 py-2.5 text-ink-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full rounded-md border border-black/15 px-3.5 py-2.5 text-ink-500 focus:outline-none focus:ring-2 focus:ring-brand-500"
         />
       </div>
       <button
         type="submit"
-        className="w-full sm:w-auto inline-flex items-center justify-center rounded-md bg-accent-500 hover:bg-accent-600 text-white font-semibold px-6 py-3.5 transition-colors"
+        className="w-full sm:w-auto inline-flex items-center justify-center rounded-md bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3.5 transition-colors"
       >
         Send Quote Request
       </button>
       {submitted && (
-        <p className="text-sm text-teal-600">
+        <p className="text-sm text-brand-600">
           Opening your email app to send this request. If nothing opens, call or text us directly instead.
         </p>
       )}
@@ -98,7 +98,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="w-full rounded-md border border-black/15 px-3.5 py-2.5 text-ink-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
+        className="w-full rounded-md border border-black/15 px-3.5 py-2.5 text-ink-500 focus:outline-none focus:ring-2 focus:ring-brand-500"
       />
     </div>
   );

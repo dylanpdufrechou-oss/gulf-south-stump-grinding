@@ -42,7 +42,7 @@ export default function ServiceAreasPage() {
                 <ul className="mt-2 space-y-1">
                   {area.cities.map((c) => (
                     <li key={c.slug}>
-                      <Link href={`/service-areas/${c.slug}`} className="text-sm text-teal-600 hover:text-teal-700">
+                      <Link href={`/service-areas/${c.slug}`} className="text-sm text-brand-600 hover:text-brand-700">
                         Stump Grinding in {c.name}
                       </Link>
                     </li>
@@ -62,7 +62,7 @@ export default function ServiceAreasPage() {
                 <ul className="mt-2 space-y-1">
                   {area.cities.map((c) => (
                     <li key={c.slug}>
-                      <Link href={`/service-areas/${c.slug}`} className="text-sm text-teal-600 hover:text-teal-700">
+                      <Link href={`/service-areas/${c.slug}`} className="text-sm text-brand-600 hover:text-brand-700">
                         Stump Grinding in {c.name}
                       </Link>
                     </li>

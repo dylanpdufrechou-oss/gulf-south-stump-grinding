@@ -19,13 +19,13 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full">
-      <div className="hidden sm:flex items-center justify-center gap-2 bg-teal-900 text-teal-50 text-sm py-1.5 px-4">
+      <div className="hidden sm:flex items-center justify-center gap-2 bg-ink-500 text-white text-sm py-1.5 px-4">
         <span>Locally Owned</span>
-        <span aria-hidden className="text-teal-300">
+        <span aria-hidden className="text-brand-400">
           •
         </span>
         <span>Fully Insured</span>
-        <span aria-hidden className="text-teal-300">
+        <span aria-hidden className="text-brand-400">
           •
         </span>
         <span>Free, No-Obligation Quotes</span>
@@ -54,7 +54,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-ink-500/80 hover:text-teal-600 transition-colors"
+                className="text-sm font-medium text-ink-500/80 hover:text-brand-600 transition-colors"
               >
                 {link.label}
               </Link>
@@ -64,14 +64,14 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <a
               href={`tel:${business.phoneE164}`}
-              className="hidden sm:inline-flex items-center gap-2 rounded-md bg-teal-500 hover:bg-teal-600 text-white font-semibold px-4 py-2.5 text-sm transition-colors"
+              className="hidden sm:inline-flex items-center gap-2 rounded-md bg-ink-500 hover:bg-ink-700 text-white font-semibold px-4 py-2.5 text-sm transition-colors"
             >
               <PhoneIcon />
               {business.phoneDisplay}
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-md bg-accent-500 hover:bg-accent-600 text-white font-semibold px-4 py-2.5 text-sm transition-colors"
+              className="inline-flex items-center rounded-md bg-brand-500 hover:bg-brand-600 text-white font-semibold px-4 py-2.5 text-sm transition-colors"
             >
               Free Quote
             </Link>
@@ -101,7 +101,7 @@ export default function Header() {
             ))}
             <a
               href={`tel:${business.phoneE164}`}
-              className="mt-3 inline-flex items-center justify-center gap-2 rounded-md bg-teal-500 text-white font-semibold px-4 py-3 text-sm"
+              className="mt-3 inline-flex items-center justify-center gap-2 rounded-md bg-ink-500 text-white font-semibold px-4 py-3 text-sm"
             >
               <PhoneIcon />
               Call {business.phoneDisplay}

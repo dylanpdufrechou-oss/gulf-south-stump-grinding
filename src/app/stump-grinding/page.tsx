@@ -93,7 +93,7 @@ export default function StumpGrindingPage() {
         </Container>
       </section>
 
-      <section className="py-20 bg-teal-50">
+      <section className="py-20 bg-brand-50">
         <Container>
           <h2 className="font-heading font-bold text-3xl text-ink-500">What&apos;s Included</h2>
           <div className="mt-10 grid sm:grid-cols-2 gap-6">
@@ -118,7 +118,7 @@ export default function StumpGrindingPage() {
               </div>
             ))}
           </div>
-          <Link href="/faq" className="mt-6 inline-block text-sm font-semibold text-teal-600 hover:text-teal-700">
+          <Link href="/faq" className="mt-6 inline-block text-sm font-semibold text-brand-600 hover:text-brand-700">
             See all FAQs →
           </Link>
         </Container>

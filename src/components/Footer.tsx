@@ -23,17 +23,17 @@ export default function Footer() {
             Parishes and South Mississippi.
           </p>
           <div className="mt-4 text-sm space-y-1">
-            <a href={`tel:${business.phoneE164}`} className="block font-semibold hover:text-teal-300">
+            <a href={`tel:${business.phoneE164}`} className="block font-semibold hover:text-brand-300">
               {business.phoneDisplay}
             </a>
-            <a href={`mailto:${business.email}`} className="block text-white/70 hover:text-teal-300">
+            <a href={`mailto:${business.email}`} className="block text-white/70 hover:text-brand-300">
               {business.email}
             </a>
           </div>
         </div>
 
         <div>
-          <h3 className="font-heading font-semibold text-sm uppercase tracking-wide text-teal-300">
+          <h3 className="font-heading font-semibold text-sm uppercase tracking-wide text-brand-300">
             Services
           </h3>
           <ul className="mt-4 space-y-2 text-sm text-white/80">
@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="font-heading font-semibold text-sm uppercase tracking-wide text-teal-300">
+          <h3 className="font-heading font-semibold text-sm uppercase tracking-wide text-brand-300">
             Louisiana Service Areas
           </h3>
           <ul className="mt-4 space-y-3 text-sm text-white/80">
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="font-heading font-semibold text-sm uppercase tracking-wide text-teal-300">
+          <h3 className="font-heading font-semibold text-sm uppercase tracking-wide text-brand-300">
             Mississippi Service Areas
           </h3>
           <ul className="mt-4 space-y-3 text-sm text-white/80">
@@ -89,7 +89,7 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-          <Link href="/service-areas" className="mt-4 inline-block text-sm font-semibold text-accent-400 hover:text-accent-500">
+          <Link href="/service-areas" className="mt-4 inline-block text-sm font-semibold text-brand-400 hover:text-brand-500">
             View all service areas →
           </Link>
         </div>

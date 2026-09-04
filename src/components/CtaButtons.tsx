@@ -5,7 +5,7 @@ export function CallButton({ className = "" }: { className?: string }) {
   return (
     <a
       href={`tel:${business.phoneE164}`}
-      className={`inline-flex items-center justify-center gap-2 rounded-md bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-3.5 transition-colors ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-md bg-ink-500 hover:bg-ink-700 text-white font-semibold px-6 py-3.5 transition-colors ${className}`}
     >
       Call {business.phoneDisplay}
     </a>
@@ -22,7 +22,7 @@ export function QuoteButton({
   return (
     <Link
       href="/contact"
-      className={`inline-flex items-center justify-center gap-2 rounded-md bg-accent-500 hover:bg-accent-600 text-white font-semibold px-6 py-3.5 transition-colors ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-md bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3.5 transition-colors ${className}`}
     >
       {label}
     </Link>

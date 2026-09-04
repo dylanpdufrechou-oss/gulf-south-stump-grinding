@@ -59,7 +59,7 @@ export default function Home() {
       <section className="bg-ink-500 text-white">
         <Container className="py-20 sm:py-28 grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-accent-400 font-semibold tracking-wide uppercase text-sm mb-4">
+            <p className="text-brand-400 font-semibold tracking-wide uppercase text-sm mb-4">
               Florida Parishes &amp; South Mississippi
             </p>
             <h1 className="font-heading font-bold text-4xl sm:text-5xl leading-tight">
@@ -79,7 +79,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4">
             {trustItems.map((item) => (
               <div key={item.label} className="rounded-lg bg-white/5 border border-white/10 p-5">
-                <p className="font-heading font-semibold text-teal-300">{item.label}</p>
+                <p className="font-heading font-semibold text-brand-300">{item.label}</p>
                 <p className="mt-1 text-sm text-white/70">{item.detail}</p>
               </div>
             ))}
@@ -101,13 +101,13 @@ export default function Home() {
               <Link
                 key={service.href}
                 href={service.href}
-                className="group rounded-xl border border-black/10 p-6 hover:border-teal-500 hover:shadow-md transition-all"
+                className="group rounded-xl border border-black/10 p-6 hover:border-brand-500 hover:shadow-md transition-all"
               >
-                <h3 className="font-heading font-semibold text-xl text-ink-500 group-hover:text-teal-600">
+                <h3 className="font-heading font-semibold text-xl text-ink-500 group-hover:text-brand-600">
                   {service.title}
                 </h3>
                 <p className="mt-2 text-sm text-ink-500/70">{service.description}</p>
-                <span className="mt-4 inline-block text-sm font-semibold text-teal-600">
+                <span className="mt-4 inline-block text-sm font-semibold text-brand-600">
                   Learn more →
                 </span>
               </Link>
@@ -117,13 +117,13 @@ export default function Home() {
       </section>
 
       {/* Process */}
-      <section className="py-20 bg-teal-50">
+      <section className="py-20 bg-brand-50">
         <Container>
           <h2 className="font-heading font-bold text-3xl text-ink-500">How It Works</h2>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step, i) => (
               <div key={step.title}>
-                <div className="w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-heading font-bold">
+                <div className="w-10 h-10 rounded-full bg-brand-500 text-white flex items-center justify-center font-heading font-bold">
                   {i + 1}
                 </div>
                 <h3 className="mt-4 font-heading font-semibold text-lg text-ink-500">{step.title}</h3>
@@ -145,7 +145,7 @@ export default function Home() {
                 and South Mississippi.
               </p>
             </div>
-            <Link href="/service-areas" className="text-sm font-semibold text-teal-600 hover:text-teal-700">
+            <Link href="/service-areas" className="text-sm font-semibold text-brand-600 hover:text-brand-700">
               View all service areas →
             </Link>
           </div>
@@ -165,7 +165,7 @@ export default function Home() {
       </section>
 
       {/* FAQ preview */}
-      <section className="py-20 bg-teal-50">
+      <section className="py-20 bg-brand-50">
         <Container className="max-w-3xl">
           <h2 className="font-heading font-bold text-3xl text-ink-500">Common Questions</h2>
           <div className="mt-8 space-y-6">
@@ -176,7 +176,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <Link href="/faq" className="mt-8 inline-block text-sm font-semibold text-teal-600 hover:text-teal-700">
+          <Link href="/faq" className="mt-8 inline-block text-sm font-semibold text-brand-600 hover:text-brand-700">
             See all FAQs →
           </Link>
         </Container>

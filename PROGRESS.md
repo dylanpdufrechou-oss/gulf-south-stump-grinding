@@ -1,6 +1,6 @@
 # Gulf South Stump Grinding — Progress Log
 
-Last updated: 2026-08-24
+Last updated: 2026-09-04
 
 ## Business
 
@@ -11,7 +11,7 @@ Last updated: 2026-08-24
 - **Home base:** Folsom, LA (St. Tammany Parish), 70437
 - **Status:** brand-new business, fully insured, no license required for stump grinding in LA/MS, quote-only pricing (no public price list)
 - **Service area:** 11 parishes/counties, 24 city landing pages across the Florida Parishes and South Mississippi (St. Tammany, Washington, Tangipahoa, Livingston, Ascension, St. Helena in LA; Pearl River, Hancock, Marion, Walthall, Pike in MS) — matches the verified Google Business Profile. Greater New Orleans (Orleans, Jefferson, St. Bernard, St. John the Baptist, St. Charles parishes) was dropped from coverage on 2026-08-24; the 8 old city pages 301/308-redirect to `/service-areas`.
-- **Brand:** circular badge logo, teal `#1c747b` + dark ink, stump/saw-blade/cypress motif; Oswald (headings) + Inter (body)
+- **Brand:** rebranded 2026-09-04 from teal/orange to red/black/white (`brand-500 #bb0a0f` + `ink-500 #10181a`) to match the new logo — same circular badge, now with a transparent background, red "GULF" + black "SOUTH STUMP GRINDING" wordmark. Oswald (headings) + Inter (body) unchanged. Call button = black, Quote button = red, matching the reference business-card design.
 
 ## Website
 
