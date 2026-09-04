@@ -1,18 +1,17 @@
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 
-// Receives quote-form submissions from QuoteForm.tsx and forwards them to a
-// Zapier "Catch Hook" webhook, which fans the lead out to a text alert +
-// backup storage (Google Sheet, etc.) inside Zapier itself. Kept server-side
-// (rather than posting to Zapier directly from the browser) so the webhook
-// URL is never exposed client-side, and so we get a real success/failure
-// signal to show the visitor instead of an unreadable opaque response.
+// Receives quote-form submissions from QuoteForm.tsx and forwards a lead
+// notification to a Zapier "Catch Hook" webhook (SMS alert + backup storage
+// fan out from there). Kept server-side rather than posting to Zapier
+// directly from the browser, so the webhook URL is never exposed client-side.
+//
+// The webhook call is fire-and-forget: it must never block or fail the
+// visitor's form submission. `after()` runs it once the response has already
+// been sent, while still guaranteeing (unlike a bare un-awaited fetch) that
+// Vercel keeps the function alive long enough for the request to finish
+// rather than tearing it down mid-flight.
 export async function POST(request: Request) {
   const webhookUrl = process.env.ZAPIER_QUOTE_WEBHOOK_URL;
-
-  if (!webhookUrl) {
-    console.error("ZAPIER_QUOTE_WEBHOOK_URL is not configured");
-    return NextResponse.json({ ok: false, error: "not_configured" }, { status: 500 });
-  }
 
   let body: Record<string, unknown>;
   try {
@@ -29,32 +28,39 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "missing_required_fields" }, { status: 400 });
   }
 
-  const payload = {
-    name,
-    phone,
-    email: typeof body.email === "string" ? body.email.trim() : "",
-    city,
-    serviceType: typeof body.serviceType === "string" ? body.serviceType : "",
-    details: typeof body.details === "string" ? body.details.trim() : "",
-    submittedAt: new Date().toISOString(),
-    source: "website_quote_form",
-  };
+  const email = typeof body.email === "string" ? body.email.trim() : "";
+  const serviceType = typeof body.serviceType === "string" ? body.serviceType : "";
+  const details = typeof body.details === "string" ? body.details.trim() : "";
 
-  try {
-    const zapierResponse = await fetch(webhookUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
+  // The Zap's downstream steps (SMS template, backup row) expect exactly
+  // these three flat keys, with everything else folded into "details".
+  const combinedDetails = [
+    serviceType && `Service Type: ${serviceType}`,
+    city && `City/Parish: ${city}`,
+    email && `Email: ${email}`,
+    details && `Details: ${details}`,
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  if (webhookUrl) {
+    after(async () => {
+      try {
+        const res = await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, phone, details: combinedDetails }),
+        });
+        if (!res.ok) {
+          console.error("Zapier quote webhook responded with", res.status, await res.text().catch(() => ""));
+        }
+      } catch (err) {
+        console.error("Failed to reach Zapier quote webhook", err);
+      }
     });
-
-    if (!zapierResponse.ok) {
-      console.error("Zapier webhook returned", zapierResponse.status, await zapierResponse.text().catch(() => ""));
-      return NextResponse.json({ ok: false, error: "webhook_failed" }, { status: 502 });
-    }
-
-    return NextResponse.json({ ok: true });
-  } catch (err) {
-    console.error("Failed to reach Zapier webhook", err);
-    return NextResponse.json({ ok: false, error: "webhook_unreachable" }, { status: 502 });
+  } else {
+    console.error("ZAPIER_QUOTE_WEBHOOK_URL is not configured — skipping webhook call");
   }
+
+  return NextResponse.json({ ok: true });
 }

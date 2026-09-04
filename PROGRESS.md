@@ -18,7 +18,7 @@ Last updated: 2026-09-04
 
 Next.js 16 (App Router) + Tailwind v4 + TypeScript, source of truth for NAP/service-areas in `src/lib/site-config.ts`.
 
-- Pages: Home, Stump Grinding, Residential, Commercial, About, FAQ, Gallery, Reviews, Contact (quote form → mailto), Service Areas index + 24 dynamic city pages
+- Pages: Home, Stump Grinding, Residential, Commercial, About, FAQ, Gallery, Reviews, Contact, Privacy Policy, Service Areas index + 24 dynamic city pages
 - Gallery/Reviews pages honestly say the business is new — no fabricated photos or reviews
 - Schema.org: LocalBusiness, Service, FAQPage, BreadcrumbList
 - sitemap.xml (34 URLs), robots.txt, canonical URLs on every page
@@ -43,6 +43,9 @@ Next.js 16 (App Router) + Tailwind v4 + TypeScript, source of truth for NAP/serv
 - [x] Email inbox confirmed receiving mail
 - [x] Before/after photos — 2 real jobs now in the Gallery (oak stump; overgrown-hedge/corner-stump), the second also featured on the homepage hero
 - [x] **GA4 conversion event tracking (2026-09-04)** — `phone_click` (every tel: link: CallButton, header desktop/mobile, footer), `text_click` (TextButton, both variants), `quote_click` (QuoteButton, header Free Quote link), and `generate_lead` (actual QuoteForm submission) all fire via `sendGAEvent` from `@next/third-parties/google`. Verified end-to-end in a real browser via `window.dataLayer` and live network capture — not just code review. **Still needs a manual step from Dylan**: mark these as Key Events in GA4 Admin (Admin → Events → toggle "Mark as key event") so they show as conversions in reporting.
+- [x] **Privacy Policy page + Meta Pixel (2026-09-04)** — `/privacy-policy` live, linked from the footer; Meta Pixel (`1354069896498626`) installed sitewide in the root layout via `next/script`, verified firing `PageView` on every navigation in production.
+- [x] **Quote form wired to Zapier (2026-09-04)** — `/api/quote` no longer just holds a placeholder; `ZAPIER_QUOTE_WEBHOOK_URL` is set in Vercel production and points at Dylan's real Zap (Catch Hook → SMS + backup sheet). Sends the exact flat `{name, phone, details}` shape the Zap expects (`details` is service type + city + email + free-text notes concatenated). Call is fire-and-forget via `after()` from `next/server` — never blocks or fails the visitor's success confirmation, errors are logged server-side only. Form itself no longer opens `mailto:` at all; shows an in-page "Request received!" confirmation or, on failure, a call/text fallback. Verified against the real webhook (Zapier returned `status: success`) and end-to-end through the actual browser form.
+- [x] **favicon.ico added (2026-09-04)** — `icon.png`/`apple-icon.png` already had the new logo from the rebrand, but there was no literal `/favicon.ico` at the domain root. Added a proper multi-size one from the same source in case Google's crawler specifically probes for it (Google's own favicon cache refreshes on its own slow schedule regardless — this doesn't force an instant update).
 
 ## In progress / not started
 
