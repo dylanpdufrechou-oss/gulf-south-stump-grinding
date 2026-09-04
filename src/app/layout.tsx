@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Oswald } from "next/font/google";
+import { Inter, Oswald, Anton } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { business } from "@/lib/site-config";
@@ -17,6 +17,15 @@ const oswald = Oswald({
   variable: "--font-oswald",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
+  display: "swap",
+});
+
+// Bold, blocky display face for the wordmark only — echoes the logo's punchy
+// lettering far better than Oswald does. Not used for body headings.
+const anton = Anton({
+  variable: "--font-anton",
+  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -50,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${oswald.variable} h-full antialiased`}
+      className={`${inter.variable} ${oswald.variable} ${anton.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans text-ink-500">
         <JsonLd data={localBusinessSchema()} />

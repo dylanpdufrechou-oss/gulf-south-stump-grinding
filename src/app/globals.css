@@ -36,6 +36,7 @@
 
   --font-sans: var(--font-inter);
   --font-heading: var(--font-oswald);
+  --font-wordmark: var(--font-anton);
 }
 
 body {
