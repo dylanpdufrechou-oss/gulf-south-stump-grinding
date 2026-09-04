@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Container from "@/components/Container";
 import PageHero from "@/components/PageHero";
+import BeforeAfter from "@/components/BeforeAfter";
 import { CallButton, QuoteButton } from "@/components/CtaButtons";
 import { business } from "@/lib/site-config";
 import { JsonLd, breadcrumbSchema } from "@/lib/schema";
@@ -53,6 +54,30 @@ export default function GalleryPage() {
         <Container>
           <div className="max-w-2xl">
             <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-2xl sm:text-3xl text-ink-500">
+              <span className="text-brand-500">Years</span> of Overgrowth, Gone in One Visit
+            </h2>
+            <p className="mt-4 text-ink-500/70 leading-relaxed">
+              A stump completely swallowed by overgrown shrubs against the house — cleared down
+              to bare dirt, opening the patio and outdoor kitchen back up.
+            </p>
+          </div>
+          <div className="mt-10 max-w-3xl mx-auto">
+            <BeforeAfter
+              beforeSrc="/gallery/corner-stump-before.webp"
+              afterSrc="/gallery/corner-stump-after.webp"
+              beforeAlt="Large stump buried in years of overgrown shrubs against a house corner"
+              afterAlt="Same corner cleared to bare dirt, stump gone, patio and outdoor kitchen fully visible"
+              dark={false}
+              priority
+            />
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-20 bg-brand-50">
+        <Container>
+          <div className="max-w-2xl">
+            <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-2xl sm:text-3xl text-ink-500">
               <span className="text-brand-500">A Recent</span> Job: Large Oak Stump
             </h2>
             <p className="mt-4 text-ink-500/70 leading-relaxed">
@@ -71,7 +96,6 @@ export default function GalleryPage() {
                   height={photo.height}
                   className="w-full h-auto"
                   sizes="(min-width: 640px) 33vw, 100vw"
-                  priority
                 />
                 <figcaption className="px-4 py-3 text-sm font-semibold text-ink-500 bg-white">
                   {photo.caption}

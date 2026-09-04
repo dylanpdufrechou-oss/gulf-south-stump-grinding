@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Container from "@/components/Container";
 import PageHero from "@/components/PageHero";
 import QuoteForm from "@/components/QuoteForm";
-import { CallButton, TextButton } from "@/components/CtaButtons";
+import { CallButton } from "@/components/CtaButtons";
 import { business } from "@/lib/site-config";
 import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
@@ -37,12 +37,27 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-xl text-ink-500">
+            <div className="rounded-xl bg-brand-50 border border-brand-100 p-5">
+              <p className="font-heading font-bold text-sm uppercase tracking-wide text-brand-600">
+                Fastest Way to a Quote
+              </p>
+              <p className="mt-2 text-sm text-ink-500/70">
+                Skip the form — text a photo of your stump and we&apos;ll reply with a price,
+                usually the same day.
+              </p>
+              <a
+                href={`sms:${business.smsE164}`}
+                className="mt-4 inline-flex items-center justify-center gap-2 rounded-md bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3.5 transition-colors w-full"
+              >
+                Text a Photo
+              </a>
+            </div>
+
+            <h2 className="mt-8 font-display italic -skew-x-[9deg] tracking-wide text-xl text-ink-500">
               <span className="text-brand-500">Prefer</span> to Talk?
             </h2>
             <div className="mt-4 flex flex-col gap-3">
-              <CallButton />
-              <TextButton className="!text-ink-500 !border-ink-500/30 hover:!bg-black/5" />
+              <CallButton className="!bg-ink-500 hover:!bg-ink-700 !text-white" />
             </div>
 
             <div className="mt-8 text-sm text-ink-500/70 space-y-1">

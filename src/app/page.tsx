@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Container from "@/components/Container";
 import { CallButton, QuoteButton, TextButton } from "@/components/CtaButtons";
+import BeforeAfter from "@/components/BeforeAfter";
 import { serviceAreas } from "@/lib/site-config";
 import { faqs } from "@/lib/content/faqs";
 import { JsonLd, faqSchema } from "@/lib/schema";
@@ -72,20 +73,37 @@ export default function Home() {
               quotes, fast scheduling, no hidden fees.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <CallButton />
               <QuoteButton />
               <TextButton />
+              <CallButton />
             </div>
+            <p className="mt-4 text-sm text-white/60">
+              Fastest way to a quote: text a photo of your stump to{" "}
+              <a href="tel:+19852247888" className="font-semibold text-brand-400 hover:text-brand-300">
+                (985) 224-7888
+              </a>
+              .
+            </p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <BeforeAfter
+            beforeSrc="/gallery/corner-stump-before.webp"
+            afterSrc="/gallery/corner-stump-after.webp"
+            beforeAlt="Large stump buried in years of overgrown shrubs against a house corner"
+            afterAlt="Same corner cleared to bare dirt, stump gone, patio and outdoor kitchen fully visible"
+            caption="One visit: overgrown shrubs and a hidden stump cleared into a usable outdoor living space."
+            priority
+          />
+        </Container>
+        <div className="border-t border-white/10">
+          <Container className="py-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
             {trustItems.map((item) => (
-              <div key={item.label} className="rounded-lg bg-white/5 border border-white/10 p-5">
-                <p className="font-heading font-semibold text-brand-300">{item.label}</p>
-                <p className="mt-1 text-sm text-white/70">{item.detail}</p>
+              <div key={item.label}>
+                <p className="font-heading font-semibold text-brand-300 text-sm">{item.label}</p>
+                <p className="mt-0.5 text-xs text-white/60">{item.detail}</p>
               </div>
             ))}
-          </div>
-        </Container>
+          </Container>
+        </div>
       </section>
 
       {/* Services overview */}
