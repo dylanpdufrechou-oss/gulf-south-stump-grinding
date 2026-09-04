@@ -4,27 +4,60 @@ import { useState } from "react";
 import { sendGAEvent } from "@next/third-parties/google";
 import { business } from "@/lib/site-config";
 
+type Status = "idle" | "submitting" | "success" | "error";
+
 export default function QuoteForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
-    const name = form.get("name");
-    const phone = form.get("phone");
-    const email = form.get("email");
-    const city = form.get("city");
-    const serviceType = form.get("serviceType");
-    const details = form.get("details");
+    setStatus("submitting");
 
-    const subject = encodeURIComponent(`Quote Request — ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nCity/Area: ${city}\nService Type: ${serviceType}\n\nDetails:\n${details}`
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const payload = {
+      name: data.get("name"),
+      phone: data.get("phone"),
+      email: data.get("email"),
+      city: data.get("city"),
+      serviceType: data.get("serviceType"),
+      details: data.get("details"),
+    };
+
+    try {
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) throw new Error("submission failed");
+
+      sendGAEvent("event", "generate_lead", {
+        form_id: "quote_form",
+        service_type: String(payload.serviceType ?? ""),
+      });
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
+  }
+
+  if (status === "success") {
+    return (
+      <div className="rounded-md bg-brand-50 border border-brand-100 p-6 text-center">
+        <p className="font-heading font-bold text-lg text-ink-500">Request received!</p>
+        <p className="mt-2 text-sm text-ink-500/70">
+          Thanks — we&apos;ve got your details and will be in touch shortly. If it&apos;s urgent,
+          call or text us at{" "}
+          <a href={`tel:${business.phoneE164}`} className="font-semibold text-brand-600 hover:text-brand-700">
+            {business.phoneDisplay}
+          </a>
+          .
+        </p>
+      </div>
     );
-
-    sendGAEvent("event", "generate_lead", { form_id: "quote_form", service_type: String(serviceType ?? "") });
-    window.location.href = `mailto:${business.email}?subject=${subject}&body=${body}`;
-    setSubmitted(true);
   }
 
   return (
@@ -66,13 +99,18 @@ export default function QuoteForm() {
       </div>
       <button
         type="submit"
-        className="w-full sm:w-auto inline-flex items-center justify-center rounded-md bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3.5 transition-colors"
+        disabled={status === "submitting"}
+        className="w-full sm:w-auto inline-flex items-center justify-center rounded-md bg-brand-500 hover:bg-brand-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold px-6 py-3.5 transition-colors"
       >
-        Send Quote Request
+        {status === "submitting" ? "Sending…" : "Send Quote Request"}
       </button>
-      {submitted && (
+      {status === "error" && (
         <p className="text-sm text-brand-600">
-          Opening your email app to send this request. If nothing opens, call or text us directly instead.
+          Something went wrong sending your request. Please call or text us directly at{" "}
+          <a href={`tel:${business.phoneE164}`} className="font-semibold underline">
+            {business.phoneDisplay}
+          </a>{" "}
+          instead.
         </p>
       )}
     </form>
