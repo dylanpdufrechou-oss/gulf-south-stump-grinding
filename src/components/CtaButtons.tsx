@@ -37,6 +37,26 @@ export function QuoteButton({
   );
 }
 
+export function ReviewButton({
+  label = "Leave Us a Google Review",
+  className = "",
+}: {
+  label?: string;
+  className?: string;
+}) {
+  return (
+    <a
+      href={business.googleReviewUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => sendGAEvent("event", "google_review_click", { link_url: business.googleReviewUrl })}
+      className={`inline-flex items-center justify-center gap-2 rounded-md bg-white hover:bg-white/90 text-ink-500 font-semibold px-6 py-3.5 transition-colors ${className}`}
+    >
+      {label}
+    </a>
+  );
+}
+
 export function TextButton({
   label = "Text a Photo",
   className = "",

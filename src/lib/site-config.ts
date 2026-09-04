@@ -14,6 +14,7 @@ export const business = {
   googleAnalyticsId: "G-70RJRW3DXJ",
   metaPixelId: "1354069896498626",
   founded: "2026",
+  googleReviewUrl: "https://g.page/r/CSMDLSqYXsvvEBM/review",
   priceRange: "$$",
   insured: true,
   licensed: false, // Louisiana/Mississippi do not require a specific license for stump grinding.

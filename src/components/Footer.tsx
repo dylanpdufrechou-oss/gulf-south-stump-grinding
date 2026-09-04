@@ -40,6 +40,15 @@ export default function Footer() {
             <a href={`mailto:${business.email}`} className="block text-white/70 hover:text-brand-300">
               {business.email}
             </a>
+            <a
+              href={business.googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => sendGAEvent("event", "google_review_click", { link_url: business.googleReviewUrl })}
+              className="block text-white/70 hover:text-brand-300"
+            >
+              Review us on Google
+            </a>
           </div>
         </div>
 

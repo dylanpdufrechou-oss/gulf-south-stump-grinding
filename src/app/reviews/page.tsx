@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Container from "@/components/Container";
 import PageHero from "@/components/PageHero";
-import { CallButton, QuoteButton } from "@/components/CtaButtons";
+import { CallButton, QuoteButton, ReviewButton } from "@/components/CtaButtons";
 import { business } from "@/lib/site-config";
 import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
@@ -36,7 +36,8 @@ export default function ReviewsPage() {
             post real reviews here and on Google as they come in.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <CallButton />
+            <ReviewButton className="!bg-brand-500 hover:!bg-brand-600 !text-white" />
+            <CallButton className="!bg-ink-500 hover:!bg-ink-700 !text-white" />
             <QuoteButton />
           </div>
         </Container>
