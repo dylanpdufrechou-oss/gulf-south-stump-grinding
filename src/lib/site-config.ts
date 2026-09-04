@@ -12,6 +12,7 @@ export const business = {
   // The apex domain redirects to www at the DNS/Vercel level, so www is canonical.
   url: "https://www.gulfsouthstumpgrinding.com",
   googleAnalyticsId: "G-70RJRW3DXJ",
+  metaPixelId: "1354069896498626",
   founded: "2026",
   priceRange: "$$",
   insured: true,

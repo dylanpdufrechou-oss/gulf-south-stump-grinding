@@ -12,6 +12,7 @@ const staticRoutes = [
   "/reviews",
   "/contact",
   "/service-areas",
+  "/privacy-policy",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -20,8 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((path) => ({
     url: `${business.url}${path}`,
     lastModified: now,
-    changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : path === "/stump-grinding" ? 0.9 : 0.7,
+    changeFrequency: path === "" ? "weekly" : path === "/privacy-policy" ? "yearly" : "monthly",
+    priority: path === "" ? 1 : path === "/stump-grinding" ? 0.9 : path === "/privacy-policy" ? 0.3 : 0.7,
   }));
 
   const cityEntries: MetadataRoute.Sitemap = allCities.map((city) => ({

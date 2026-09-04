@@ -108,7 +108,13 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/50">
-          <p>© {new Date().getFullYear()} {business.name}. All rights reserved.</p>
+          <p className="flex flex-wrap items-center justify-center gap-2">
+            <span>© {new Date().getFullYear()} {business.name}. All rights reserved.</span>
+            <span aria-hidden>·</span>
+            <Link href="/privacy-policy" className="hover:text-white">
+              Privacy Policy
+            </Link>
+          </p>
           <p>Serving the Florida Parishes &amp; South Mississippi</p>
         </div>
       </div>
