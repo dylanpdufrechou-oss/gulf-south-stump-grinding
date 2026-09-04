@@ -59,7 +59,9 @@ export default function ResidentialPage() {
 
       <section className="py-20">
         <Container>
-          <h2 className="font-heading font-bold text-3xl text-ink-500">Common Homeowner Jobs</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+            <span className="text-brand-500">Common</span> Homeowner Jobs
+          </h2>
           <div className="mt-10 grid sm:grid-cols-2 gap-6">
             {scenarios.map((s) => (
               <div key={s.title} className="rounded-xl border border-black/10 p-6">
@@ -73,7 +75,9 @@ export default function ResidentialPage() {
 
       <section className="py-20 bg-brand-50">
         <Container className="max-w-3xl">
-          <h2 className="font-heading font-bold text-3xl text-ink-500">What to Expect</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+            <span className="text-brand-500">What</span> to Expect
+          </h2>
           <ol className="mt-6 space-y-4 text-ink-500/80">
             <li><strong className="text-ink-500">1. Send a photo.</strong> Text or upload a picture of the stump and the access path to your yard.</li>
             <li><strong className="text-ink-500">2. Get a free quote.</strong> We&apos;ll give you a fair price based on size, root spread, and access — no site visit required for most jobs.</li>
@@ -85,7 +89,9 @@ export default function ResidentialPage() {
 
       <section className="py-16 bg-ink-500 text-white">
         <Container className="text-center">
-          <h2 className="font-heading font-bold text-3xl">Get Your Yard Back</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl">
+            <span className="text-brand-400">Get</span> Your Yard Back
+          </h2>
           <p className="mt-3 text-white/70 max-w-xl mx-auto">
             Free quotes for homeowners across the region — call, text, or request one online.
           </p>

@@ -94,8 +94,8 @@ export default async function CityPage({
 
       <section className="py-20">
         <Container className="max-w-3xl">
-          <h2 className="font-heading font-bold text-3xl text-ink-500">
-            Stump Grinding Services in {city.name}
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+            <span className="text-brand-500">Stump</span> Grinding Services in {city.name}
           </h2>
           <p className="mt-4 text-ink-500/70 leading-relaxed">{intro}</p>
           {city.localNote && (
@@ -111,7 +111,9 @@ export default async function CityPage({
 
       <section className="py-20 bg-brand-50">
         <Container className="max-w-3xl">
-          <h2 className="font-heading font-bold text-3xl text-ink-500">Local FAQs</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+            <span className="text-brand-500">Local</span> FAQs
+          </h2>
           <div className="mt-8 space-y-6">
             {cityFaqs.map((faq) => (
               <div key={faq.question}>
@@ -126,8 +128,8 @@ export default async function CityPage({
       {nearbyCities.length > 0 && (
         <section className="py-16">
           <Container>
-            <h2 className="font-heading font-bold text-2xl text-ink-500">
-              Also Serving {city.parish} {city.unitLabel}
+            <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-2xl text-ink-500">
+              <span className="text-brand-500">Also</span> Serving {city.parish} {city.unitLabel}
             </h2>
             <div className="mt-4 flex flex-wrap gap-3">
               {nearbyCities.map((c) => (
@@ -146,7 +148,9 @@ export default async function CityPage({
 
       <section className="py-16 bg-ink-500 text-white">
         <Container className="text-center">
-          <h2 className="font-heading font-bold text-3xl">Get a Free Quote in {city.name}</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl">
+            <span className="text-brand-400">Get</span> a Free Quote in {city.name}
+          </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <CallButton />
             <QuoteButton />

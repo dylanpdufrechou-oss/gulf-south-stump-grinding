@@ -62,8 +62,9 @@ export default function Home() {
             <p className="text-brand-400 font-semibold tracking-wide uppercase text-sm mb-4">
               Florida Parishes &amp; South Mississippi
             </p>
-            <h1 className="font-heading font-bold text-4xl sm:text-5xl leading-tight">
-              Stumps Gone. Yard Back.
+            <h1 className="font-display italic -skew-x-[9deg] text-4xl sm:text-6xl leading-[0.95] tracking-wide">
+              <span className="block text-brand-500">Stumps Gone.</span>
+              <span className="block text-white">Yard Back.</span>
             </h1>
             <p className="mt-6 text-lg text-white/80 max-w-xl">
               Fully insured stump grinding for homeowners and businesses across the
@@ -91,7 +92,9 @@ export default function Home() {
       <section className="py-20">
         <Container>
           <div className="max-w-2xl">
-            <h2 className="font-heading font-bold text-3xl text-ink-500">What We Do</h2>
+            <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+              <span className="text-brand-500">What</span> We Do
+            </h2>
             <p className="mt-3 text-ink-500/70">
               Stump grinding is our specialty, for residential yards and commercial sites alike.
             </p>
@@ -119,7 +122,9 @@ export default function Home() {
       {/* Process */}
       <section className="py-20 bg-brand-50">
         <Container>
-          <h2 className="font-heading font-bold text-3xl text-ink-500">How It Works</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+            <span className="text-brand-500">How</span> It Works
+          </h2>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step, i) => (
               <div key={step.title}>
@@ -139,7 +144,9 @@ export default function Home() {
         <Container>
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
             <div>
-              <h2 className="font-heading font-bold text-3xl text-ink-500">Where We Work</h2>
+              <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+                <span className="text-brand-500">Where</span> We Work
+              </h2>
               <p className="mt-3 text-ink-500/70 max-w-2xl">
                 Based in St. Tammany Parish, serving 24 cities across the Florida Parishes
                 and South Mississippi.
@@ -167,7 +174,9 @@ export default function Home() {
       {/* FAQ preview */}
       <section className="py-20 bg-brand-50">
         <Container className="max-w-3xl">
-          <h2 className="font-heading font-bold text-3xl text-ink-500">Common Questions</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+            <span className="text-brand-500">Common</span> Questions
+          </h2>
           <div className="mt-8 space-y-6">
             {previewFaqs.map((faq) => (
               <div key={faq.question}>
@@ -185,7 +194,9 @@ export default function Home() {
       {/* Final CTA */}
       <section className="py-16 bg-ink-500 text-white">
         <Container className="text-center">
-          <h2 className="font-heading font-bold text-3xl">Ready to Get Rid of That Stump?</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl">
+            <span className="text-brand-400">Ready</span> to Get Rid of That Stump?
+          </h2>
           <p className="mt-3 text-white/70 max-w-xl mx-auto">
             Free quotes, fast responses, and a fully insured crew — call, text, or request a quote online.
           </p>

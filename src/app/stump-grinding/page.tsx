@@ -79,8 +79,8 @@ export default function StumpGrindingPage() {
 
       <section className="py-20">
         <Container className="max-w-3xl">
-          <h2 className="font-heading font-bold text-3xl text-ink-500">
-            Why Grind Instead of Remove?
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+            <span className="text-brand-500">Why</span> Grind Instead of Remove?
           </h2>
           <p className="mt-4 text-ink-500/70 leading-relaxed">
             A leftover stump isn&apos;t just an eyesore — it&apos;s a tripping hazard, a mower-killer,
@@ -95,7 +95,9 @@ export default function StumpGrindingPage() {
 
       <section className="py-20 bg-brand-50">
         <Container>
-          <h2 className="font-heading font-bold text-3xl text-ink-500">What&apos;s Included</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+            <span className="text-brand-500">What&apos;s</span> Included
+          </h2>
           <div className="mt-10 grid sm:grid-cols-2 gap-6">
             {included.map((item) => (
               <div key={item.title} className="bg-white rounded-xl p-6 border border-black/5">
@@ -109,7 +111,9 @@ export default function StumpGrindingPage() {
 
       <section className="py-20">
         <Container className="max-w-3xl">
-          <h2 className="font-heading font-bold text-3xl text-ink-500">Stump Grinding FAQs</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+            <span className="text-brand-500">Stump</span> Grinding FAQs
+          </h2>
           <div className="mt-8 space-y-6">
             {stumpFaqs.map((faq) => (
               <div key={faq.question}>
@@ -126,7 +130,9 @@ export default function StumpGrindingPage() {
 
       <section className="py-16 bg-ink-500 text-white">
         <Container className="text-center">
-          <h2 className="font-heading font-bold text-3xl">Get a Free Stump Grinding Quote</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl">
+            <span className="text-brand-400">Get</span> a Free Stump Grinding Quote
+          </h2>
           <p className="mt-3 text-white/70 max-w-xl mx-auto">
             Send us a photo of your stump and we&apos;ll get back to you with a fair, no-obligation quote.
           </p>

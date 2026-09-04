@@ -37,6 +37,11 @@
   --font-sans: var(--font-inter);
   --font-heading: var(--font-oswald);
   --font-wordmark: var(--font-anton);
+
+  /* Semantic aliases: swap the underlying face here without touching every
+     component that references font-display / font-body. */
+  --font-display: var(--font-anton);
+  --font-body: var(--font-inter);
 }
 
 body {

@@ -43,7 +43,7 @@ export default function Header() {
               priority
             />
             <span className="hidden md:flex flex-col leading-none gap-1">
-              <span className="font-wordmark italic -skew-x-6 text-2xl tracking-wide">
+              <span className="font-wordmark italic -skew-x-[9deg] text-2xl tracking-wide">
                 <span className="text-brand-600">Gulf</span>{" "}
                 <span className="text-ink-500">South</span>
               </span>

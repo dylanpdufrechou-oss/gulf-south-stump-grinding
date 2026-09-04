@@ -46,7 +46,9 @@ export default function FaqPage() {
 
       <section className="py-16 bg-ink-500 text-white">
         <Container className="text-center">
-          <h2 className="font-heading font-bold text-3xl">Still Have Questions?</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl">
+            <span className="text-brand-400">Still</span> Have Questions?
+          </h2>
           <p className="mt-3 text-white/70 max-w-xl mx-auto">
             Call, text, or send us a message — we&apos;ll answer directly, no call center.
           </p>

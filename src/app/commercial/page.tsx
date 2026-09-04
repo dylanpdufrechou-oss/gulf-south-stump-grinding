@@ -59,7 +59,9 @@ export default function CommercialPage() {
 
       <section className="py-20">
         <Container>
-          <h2 className="font-heading font-bold text-3xl text-ink-500">Who We Work With</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+            <span className="text-brand-500">Who</span> We Work With
+          </h2>
           <div className="mt-10 grid sm:grid-cols-2 gap-6">
             {clients.map((c) => (
               <div key={c.title} className="rounded-xl border border-black/10 p-6">
@@ -73,7 +75,9 @@ export default function CommercialPage() {
 
       <section className="py-20 bg-brand-50">
         <Container className="max-w-3xl">
-          <h2 className="font-heading font-bold text-3xl text-ink-500">Working With Us</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+            <span className="text-brand-500">Working</span> With Us
+          </h2>
           <p className="mt-4 text-ink-500/70 leading-relaxed">
             Every commercial job is quoted on its own terms — number of stumps, site access,
             timeline, and any scheduling constraints. We&apos;re fully insured, which matters for
@@ -85,7 +89,9 @@ export default function CommercialPage() {
 
       <section className="py-16 bg-ink-500 text-white">
         <Container className="text-center">
-          <h2 className="font-heading font-bold text-3xl">Request a Commercial Quote</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl">
+            <span className="text-brand-400">Request</span> a Commercial Quote
+          </h2>
           <p className="mt-3 text-white/70 max-w-xl mx-auto">
             Tell us about your property and stump count — we&apos;ll put together a quote for the full job.
           </p>

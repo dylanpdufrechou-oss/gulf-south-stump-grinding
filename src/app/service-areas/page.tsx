@@ -32,7 +32,7 @@ export default function ServiceAreasPage() {
 
       <section className="py-20">
         <Container>
-          <h2 className="font-heading font-bold text-3xl text-ink-500">Louisiana</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-brand-500">Louisiana</h2>
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
             {laAreas.map((area) => (
               <div key={area.parish}>
@@ -52,7 +52,7 @@ export default function ServiceAreasPage() {
             ))}
           </div>
 
-          <h2 className="font-heading font-bold text-3xl text-ink-500 mt-16">Mississippi</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-brand-500 mt-16">Mississippi</h2>
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
             {msAreas.map((area) => (
               <div key={area.parish}>
@@ -76,7 +76,9 @@ export default function ServiceAreasPage() {
 
       <section className="py-16 bg-ink-500 text-white">
         <Container className="text-center">
-          <h2 className="font-heading font-bold text-3xl">Don&apos;t See Your Town?</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl">
+            <span className="text-brand-400">Don&apos;t</span> See Your Town?
+          </h2>
           <p className="mt-3 text-white/70 max-w-xl mx-auto">
             We may still be able to help — give us a call and tell us where you&apos;re located.
           </p>

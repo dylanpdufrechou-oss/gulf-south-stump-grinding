@@ -43,7 +43,9 @@ export default function AboutPage() {
 
       <section className="py-20">
         <Container className="max-w-3xl">
-          <h2 className="font-heading font-bold text-3xl text-ink-500">Who We Are</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+            <span className="text-brand-500">Who</span> We Are
+          </h2>
           <p className="mt-4 text-ink-500/70 leading-relaxed">
             Gulf South Stump Grinding is a locally owned business based in St. Tammany Parish,
             serving homeowners and businesses across the Florida Parishes and South
@@ -62,7 +64,9 @@ export default function AboutPage() {
 
       <section className="py-20 bg-brand-50">
         <Container>
-          <h2 className="font-heading font-bold text-3xl text-ink-500">What We Stand On</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500">
+            <span className="text-brand-500">What</span> We Stand On
+          </h2>
           <div className="mt-10 grid sm:grid-cols-3 gap-6">
             {values.map((v) => (
               <div key={v.title} className="bg-white rounded-xl p-6 border border-black/5">
@@ -76,7 +80,9 @@ export default function AboutPage() {
 
       <section className="py-16 bg-ink-500 text-white">
         <Container className="text-center">
-          <h2 className="font-heading font-bold text-3xl">Let&apos;s Get That Stump Handled</h2>
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl">
+            <span className="text-brand-400">Let&apos;s</span> Get That Stump Handled
+          </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <CallButton />
             <QuoteButton />

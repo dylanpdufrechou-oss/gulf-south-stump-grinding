@@ -30,14 +30,16 @@ export default function ContactPage() {
       <section className="py-20">
         <Container className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 bg-white rounded-xl border border-black/10 p-6 sm:p-8">
-            <h2 className="font-heading font-bold text-2xl text-ink-500 mb-6">
-              Request a Free Quote
+            <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-2xl text-ink-500 mb-6">
+              <span className="text-brand-500">Request</span> a Free Quote
             </h2>
             <QuoteForm />
           </div>
 
           <div>
-            <h2 className="font-heading font-bold text-xl text-ink-500">Prefer to Talk?</h2>
+            <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-xl text-ink-500">
+              <span className="text-brand-500">Prefer</span> to Talk?
+            </h2>
             <div className="mt-4 flex flex-col gap-3">
               <CallButton />
               <TextButton className="!text-ink-500 !border-ink-500/30 hover:!bg-black/5" />

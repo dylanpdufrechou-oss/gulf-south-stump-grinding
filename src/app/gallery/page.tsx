@@ -52,8 +52,8 @@ export default function GalleryPage() {
       <section className="py-20">
         <Container>
           <div className="max-w-2xl">
-            <h2 className="font-heading font-bold text-2xl sm:text-3xl text-ink-500">
-              A Recent Job: Large Oak Stump
+            <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-2xl sm:text-3xl text-ink-500">
+              <span className="text-brand-500">A Recent</span> Job: Large Oak Stump
             </h2>
             <p className="mt-4 text-ink-500/70 leading-relaxed">
               Start to finish on one of our stump jobs — a large oak stump ground below grade
@@ -98,8 +98,8 @@ export default function GalleryPage() {
 
       <section className="pb-20">
         <Container className="max-w-2xl text-center">
-          <h2 className="font-heading font-bold text-2xl text-ink-500">
-            More Photos Coming Soon
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-2xl text-ink-500">
+            <span className="text-brand-500">More</span> Photos Coming Soon
           </h2>
           <p className="mt-4 text-ink-500/70 leading-relaxed">
             We&apos;re a new crew building our portfolio one job at a time. Check back as we add

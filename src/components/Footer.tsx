@@ -13,7 +13,7 @@ export default function Footer() {
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.png" alt={`${business.name} logo`} width={96} height={96} className="rounded-full w-16 h-16" />
             <span className="flex flex-col leading-none gap-1">
-              <span className="font-wordmark italic -skew-x-6 text-xl tracking-wide">
+              <span className="font-wordmark italic -skew-x-[9deg] text-xl tracking-wide">
                 <span className="text-brand-400">Gulf</span>{" "}
                 <span className="text-white">South</span>
               </span>

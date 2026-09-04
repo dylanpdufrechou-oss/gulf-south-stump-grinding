@@ -26,8 +26,8 @@ export default function ReviewsPage() {
 
       <section className="py-20">
         <Container className="max-w-2xl text-center">
-          <h2 className="font-heading font-bold text-2xl text-ink-500">
-            We&apos;re Just Getting Started
+          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-2xl text-ink-500">
+            <span className="text-brand-500">We&apos;re</span> Just Getting Started
           </h2>
           <p className="mt-4 text-ink-500/70 leading-relaxed">
             Gulf South Stump Grinding is a new business, so we don&apos;t have a page of reviews
