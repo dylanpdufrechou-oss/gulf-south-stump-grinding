@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Container from "@/components/Container";
 import PageHero from "@/components/PageHero";
 import { CallButton, QuoteButton, ReviewButton } from "@/components/CtaButtons";
@@ -27,15 +28,20 @@ export default function ReviewsPage() {
       <section className="py-20">
         <Container className="max-w-2xl text-center">
           <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-2xl text-ink-500">
-            <span className="text-brand-500">We&apos;re</span> Just Getting Started
+            <span className="text-brand-500">What Our</span> Customers Say
           </h2>
           <p className="mt-4 text-ink-500/70 leading-relaxed">
-            Gulf South Stump Grinding is a new business, so we don&apos;t have a page of reviews
-            yet — but every job is a chance to earn one. If you&apos;re one of our first
-            customers, we&apos;ll ask you for honest feedback once the work is done, and we&apos;ll
-            post real reviews here and on Google as they come in.
+            Real reviews from real customers, pulled straight from Google.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+        </Container>
+
+        <Container className="mt-10">
+          <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
+          <div className="elfsight-app-b07c6f4c-ebbc-4800-a87e-715adc50a621" data-elfsight-app-lazy />
+        </Container>
+
+        <Container className="max-w-2xl text-center mt-10">
+          <div className="flex flex-wrap justify-center gap-3">
             <ReviewButton className="!bg-brand-500 hover:!bg-brand-600 !text-white" />
             <CallButton className="!bg-ink-500 hover:!bg-ink-700 !text-white" />
             <QuoteButton />
