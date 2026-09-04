@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Container from "@/components/Container";
 import PageHero from "@/components/PageHero";
 import QuoteForm from "@/components/QuoteForm";
-import { CallButton } from "@/components/CtaButtons";
+import { CallButton, TextButton } from "@/components/CtaButtons";
 import { business } from "@/lib/site-config";
 import { JsonLd, breadcrumbSchema } from "@/lib/schema";
 
@@ -45,12 +45,7 @@ export default function ContactPage() {
                 Skip the form — text a photo of your stump and we&apos;ll reply with a price,
                 usually the same day.
               </p>
-              <a
-                href={`sms:${business.smsE164}`}
-                className="mt-4 inline-flex items-center justify-center gap-2 rounded-md bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3.5 transition-colors w-full"
-              >
-                Text a Photo
-              </a>
+              <TextButton variant="solid" className="mt-4 w-full" />
             </div>
 
             <h2 className="mt-8 font-display italic -skew-x-[9deg] tracking-wide text-xl text-ink-500">

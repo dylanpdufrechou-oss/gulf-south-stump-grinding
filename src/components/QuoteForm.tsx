@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { sendGAEvent } from "@next/third-parties/google";
 import { business } from "@/lib/site-config";
 
 export default function QuoteForm() {
@@ -21,6 +22,7 @@ export default function QuoteForm() {
       `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nCity/Area: ${city}\nService Type: ${serviceType}\n\nDetails:\n${details}`
     );
 
+    sendGAEvent("event", "generate_lead", { form_id: "quote_form", service_type: String(serviceType ?? "") });
     window.location.href = `mailto:${business.email}?subject=${subject}&body=${body}`;
     setSubmitted(true);
   }

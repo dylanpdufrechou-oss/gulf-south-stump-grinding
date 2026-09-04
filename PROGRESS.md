@@ -38,16 +38,17 @@ Next.js 16 (App Router) + Tailwind v4 + TypeScript, source of truth for NAP/serv
 - [x] Real phone number wired in everywhere (site + schema)
 - [x] Logo sized properly in header/footer
 - [x] Google Analytics 4 installed and verified
+- [x] Google Business Profile verified
+- [x] Google Local Services Ads (LSA) applied and running
+- [x] Email inbox confirmed receiving mail
+- [x] Before/after photos — 2 real jobs now in the Gallery (oak stump; overgrown-hedge/corner-stump), the second also featured on the homepage hero
+- [x] **GA4 conversion event tracking (2026-09-04)** — `phone_click` (every tel: link: CallButton, header desktop/mobile, footer), `text_click` (TextButton, both variants), `quote_click` (QuoteButton, header Free Quote link), and `generate_lead` (actual QuoteForm submission) all fire via `sendGAEvent` from `@next/third-parties/google`. Verified end-to-end in a real browser via `window.dataLayer` and live network capture — not just code review. **Still needs a manual step from Dylan**: mark these as Key Events in GA4 Admin (Admin → Events → toggle "Mark as key event") so they show as conversions in reporting.
 
 ## In progress / not started
 
-- [ ] **Google Business Profile** — profile created (name, category, all 15 service areas, phone, hours, description, services) and submitted for verification. Google only offered video verification for this listing — Dylan needs to film equipment/truck/job site and submit at business.google.com. Once verified, add the profile URL to `business.sameAs` in `site-config.ts`.
-- [ ] **Google Local Services Ads (LSA)** — recommended as the highest-priority paid channel (pay-per-lead, "Google Guaranteed" badge compensates for zero reviews). Needs: Certificate of Insurance, background check, category selection (likely "Tree Service"). Not yet applied for.
-- [ ] **Email inbox** — confirm info@gulfsouthstumpgrinding.com is actually receiving mail (forwarding to personal Gmail, or a real mailbox via Google Workspace).
-- [x] **Before/after photos** — first job (large oak stump) added to Gallery page: 3 real photos + time-lapse video, optimized for web (HEVC source transcoded to H.264 MP4, images resized/converted to WebP).
-- [ ] **Reviews** — none yet; add Review schema once real reviews come in. Do not fabricate.
+- [ ] **Reviews** — none yet; add Review schema once real reviews come in. Do not fabricate. Recommended workflow: text the Google review link to every customer right after a completed job.
 - [ ] **Content/blog strategy** — long-term plan for ranking hundreds of local search terms; not started.
-- [ ] **Google Ads (standard Search)** — lower priority than LSA right now; revisit once LSA is running.
+- [ ] **Google Ads (standard Search)** — lower priority than LSA right now; revisit once LSA has runway.
 
 ## Related but separate
 

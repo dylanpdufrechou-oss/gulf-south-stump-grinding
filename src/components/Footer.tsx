@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { sendGAEvent } from "@next/third-parties/google";
 import { business, serviceAreas } from "@/lib/site-config";
 
 const laAreas = serviceAreas.filter((a) => a.state === "LA");
@@ -27,7 +30,11 @@ export default function Footer() {
             Parishes and South Mississippi.
           </p>
           <div className="mt-4 text-sm space-y-1">
-            <a href={`tel:${business.phoneE164}`} className="block font-semibold hover:text-brand-300">
+            <a
+              href={`tel:${business.phoneE164}`}
+              onClick={() => sendGAEvent("event", "phone_click", { link_url: `tel:${business.phoneE164}` })}
+              className="block font-semibold hover:text-brand-300"
+            >
               {business.phoneDisplay}
             </a>
             <a href={`mailto:${business.email}`} className="block text-white/70 hover:text-brand-300">

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { sendGAEvent } from "@next/third-parties/google";
 import { business } from "@/lib/site-config";
 
 const navLinks = [
@@ -68,6 +69,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <a
               href={`tel:${business.phoneE164}`}
+              onClick={() => sendGAEvent("event", "phone_click", { link_url: `tel:${business.phoneE164}` })}
               className="hidden sm:inline-flex items-center gap-2 rounded-md bg-ink-500 hover:bg-ink-700 text-white font-semibold px-4 py-2.5 text-sm transition-colors"
             >
               <PhoneIcon />
@@ -75,6 +77,7 @@ export default function Header() {
             </a>
             <Link
               href="/contact"
+              onClick={() => sendGAEvent("event", "quote_click", { link_text: "Free Quote (header)" })}
               className="inline-flex items-center rounded-md bg-brand-500 hover:bg-brand-600 text-white font-semibold px-4 py-2.5 text-sm transition-colors"
             >
               Free Quote
@@ -105,6 +108,7 @@ export default function Header() {
             ))}
             <a
               href={`tel:${business.phoneE164}`}
+              onClick={() => sendGAEvent("event", "phone_click", { link_url: `tel:${business.phoneE164}` })}
               className="mt-3 inline-flex items-center justify-center gap-2 rounded-md bg-ink-500 text-white font-semibold px-4 py-3 text-sm"
             >
               <PhoneIcon />
