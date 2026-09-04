@@ -12,10 +12,14 @@ export default function Footer() {
         <div>
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.png" alt={`${business.name} logo`} width={96} height={96} className="rounded-full w-16 h-16" />
-            <span className="font-heading font-semibold leading-tight text-lg">
-              Gulf South
-              <br />
-              Stump Grinding
+            <span className="flex flex-col leading-none gap-1">
+              <span className="font-heading font-bold text-lg">
+                <span className="text-brand-400">Gulf</span>{" "}
+                <span className="text-white">South</span>
+              </span>
+              <span className="font-heading font-semibold text-[10px] tracking-[0.15em] text-brand-400 uppercase">
+                Stump Grinding
+              </span>
             </span>
           </Link>
           <p className="mt-4 text-sm text-white/70 leading-relaxed">

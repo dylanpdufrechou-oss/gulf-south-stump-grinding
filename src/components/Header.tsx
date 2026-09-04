@@ -42,10 +42,14 @@ export default function Header() {
               className="rounded-full w-16 h-16 sm:w-20 sm:h-20"
               priority
             />
-            <span className="hidden md:block font-heading font-semibold text-ink-500 leading-tight text-xl">
-              Gulf South
-              <br />
-              Stump Grinding
+            <span className="hidden md:flex flex-col leading-none gap-1">
+              <span className="font-heading font-bold text-xl">
+                <span className="text-brand-600">Gulf</span>{" "}
+                <span className="text-ink-500">South</span>
+              </span>
+              <span className="font-heading font-semibold text-[11px] tracking-[0.15em] text-brand-600 uppercase">
+                Stump Grinding
+              </span>
             </span>
           </Link>
 
