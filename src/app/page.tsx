@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 import type { Metadata } from "next";
 import Container from "@/components/Container";
 import { CallButton, QuoteButton, TextButton } from "@/components/CtaButtons";
@@ -22,11 +23,6 @@ const trustItems = [
   { icon: ClockIcon, label: "Fast Scheduling", detail: "Quick turnaround" },
   { icon: MapPinIcon, label: "Locally Owned", detail: "Based on the Northshore" },
 ];
-
-// Real Google reviews aren't loaded into the project yet — these are clearly
-// labeled placeholders so the owner can swap in actual review text later
-// without guessing which cards still need real content.
-const reviewPlaceholders = [1, 2, 3];
 
 const quoteSteps = [
   { title: "Send a Photo", description: "Text us a picture of the stump." },
@@ -146,31 +142,26 @@ export default function Home() {
 
       {/* Social proof */}
       <section className="py-20">
-        <Container className="text-center">
-          <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500 max-w-3xl mx-auto">
-            <span className="text-brand-500">Trusted</span> by Homeowners &amp; Businesses Across the Northshore
-          </h2>
-          <div className="mt-5 flex flex-col items-center gap-1">
-            <span className="text-brand-500 text-2xl tracking-widest" aria-hidden>
-              ★★★★★
-            </span>
-            <p className="font-heading font-semibold text-ink-500">5.0 Google Rating</p>
+        <Container>
+          <div className="text-center">
+            <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-3xl text-ink-500 max-w-3xl mx-auto">
+              <span className="text-brand-500">Trusted</span> by Homeowners &amp; Businesses Across the Northshore
+            </h2>
+            <div className="mt-5 flex flex-col items-center gap-1">
+              <span className="text-brand-500 text-2xl tracking-widest" aria-hidden>
+                ★★★★★
+              </span>
+              <p className="font-heading font-semibold text-ink-500">5.0 Google Rating</p>
+            </div>
           </div>
-          <div className="mt-12 grid lg:grid-cols-3 gap-6 text-left">
-            {reviewPlaceholders.map((n) => (
-              <div key={n} className="rounded-xl border-2 border-dashed border-black/15 bg-black/[0.03] p-6">
-                <span className="text-brand-500 tracking-widest" aria-hidden>
-                  ★★★★★
-                </span>
-                <p className="mt-3 text-sm text-ink-500/50 italic leading-relaxed">
-                  Placeholder — replace with a real Google review once copied over from your business profile.
-                </p>
-                <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-ink-500/30">
-                  Review placeholder {n}
-                </p>
-              </div>
-            ))}
+
+          {/* Live Google reviews, pulled via Elfsight. The widget's own overall-rating
+              header and title are switched off in the Elfsight dashboard so the 5.0
+              rating above stays the single source of truth for the site's rating. */}
+          <div className="mt-12 w-full overflow-x-hidden">
+            <div className="elfsight-app-b07c6f4c-ebbc-4800-a87e-715adc50a621" data-elfsight-app-lazy />
           </div>
+          <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
         </Container>
       </section>
 
