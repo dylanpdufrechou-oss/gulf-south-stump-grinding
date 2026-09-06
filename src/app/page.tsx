@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import Container from "@/components/Container";
 import { CallButton, QuoteButton, TextButton } from "@/components/CtaButtons";
@@ -211,7 +212,14 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <ImagePlaceholder label="Photo of the self-propelled grinder on a tight-access job — coming soon" />
+          <Image
+            src="/gallery/poolside-fence-stump-before.webp"
+            alt="Compact tracked stump grinder working a stump in a narrow strip between a pool deck and wrought-iron fence"
+            width={1200}
+            height={1600}
+            className="w-full h-auto rounded-xl border border-black/10"
+            sizes="(min-width: 1024px) 50vw, 100vw"
+          />
         </Container>
       </section>
 
