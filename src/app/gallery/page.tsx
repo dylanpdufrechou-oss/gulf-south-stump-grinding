@@ -78,6 +78,30 @@ export default function GalleryPage() {
         <Container>
           <div className="max-w-2xl">
             <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-2xl sm:text-3xl text-ink-500">
+              <span className="text-brand-500">We Work</span> in Tight Spaces
+            </h2>
+            <p className="mt-4 text-ink-500/70 leading-relaxed">
+              This stump sat in a narrow strip between the pool deck and the fence line — no
+              room for a full-size machine. Our compact tracked grinder fit right through and
+              left the area clean, with the pool decking and fence untouched.
+            </p>
+          </div>
+          <div className="mt-10 max-w-3xl mx-auto">
+            <BeforeAfter
+              beforeSrc="/gallery/poolside-fence-stump-before.webp"
+              afterSrc="/gallery/poolside-fence-stump-after.webp"
+              beforeAlt="Stump next to a pool deck and wrought-iron fence, compact tracked stump grinder staged in the narrow gap"
+              afterAlt="Same narrow strip between pool deck and fence with the stump fully ground out and area cleared"
+              dark={false}
+            />
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-20">
+        <Container>
+          <div className="max-w-2xl">
+            <h2 className="font-display italic -skew-x-[9deg] tracking-wide text-2xl sm:text-3xl text-ink-500">
               <span className="text-brand-500">A Recent</span> Job: Large Oak Stump
             </h2>
             <p className="mt-4 text-ink-500/70 leading-relaxed">
